@@ -7,6 +7,7 @@ import (
 	"sync"
 	"time"
 
+	p1 "github.com/alitto/pond"
 	"github.com/alitto/pond/v2"
 )
 
@@ -18,7 +19,7 @@ func main() {
 func SubmitErrorWithTaskGroup() {
 	// Create a pool with limited concurrency
 	pool := pond.NewPool(2, pond.WithQueueSize(1))
-
+	_ = p1.New(1, 2)
 	// Create a task group
 	group := pool.NewGroup()
 
