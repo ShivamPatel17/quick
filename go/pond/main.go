@@ -12,8 +12,8 @@ import (
 )
 
 func main() {
-	SubmitErrorWithPool()
-	// SubmitErrorWithTaskGroup()
+	// SubmitErrorWithPool()
+	SubmitErrorWithTaskGroup()
 }
 
 func SubmitErrorWithTaskGroup() {
@@ -24,7 +24,7 @@ func SubmitErrorWithTaskGroup() {
 	group := pool.NewGroup()
 
 	// Submit a group of tasks
-	for i := 0; i < 20; i++ {
+	for i := 0; i < 2000000; i++ {
 		group.SubmitErr(func() error {
 			if i == 10 {
 				return errors.New("an error occurred")
