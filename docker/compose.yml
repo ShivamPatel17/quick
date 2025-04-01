@@ -1,0 +1,5 @@
+services:
+  web:
+    image: alpine:latest
+    build: . # not actually needed, as the image will be found on docker hm
+    command: "echo $PWD"
