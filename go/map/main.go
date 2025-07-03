@@ -10,13 +10,11 @@ type Point struct {
 }
 
 func main() {
-	m := make(map[Point]Point)
+	m := map[int]int32{
+		1: 0,
+	}
 
-	p1 := Point{X: 3, Y: 4}
-
-	p2 := m[p1]
-	p2.X = 10
-	p2.Y = 1
-
-	fmt.Println(p2) // Output: Point 1
+	e, ok := m[2]
+	fmt.Println(e)
+	fmt.Println(ok)
 }
